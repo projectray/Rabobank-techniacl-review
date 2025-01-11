@@ -60,7 +60,7 @@ The uploaded lost item text file should follow this format:
    Quantity: <quantity>
    Place: <place>
    ...
-
+   ```
 For example:
    ItemName: Laptop
    Quantity: 1
