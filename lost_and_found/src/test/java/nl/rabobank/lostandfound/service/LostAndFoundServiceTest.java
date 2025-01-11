@@ -78,6 +78,14 @@ class LostAndFoundServiceTest {
   }
 
   @Test
+  void failedClaimDueToNotItemNotExistTest() {
+    when(lostItemRepository.findById(1L)).thenReturn(Optional.empty());
+
+    Exception ex = assertThrows(BadRequestException.class, () -> lostAndFoundService.claimItem(1L, 1L, 3));
+    assertEquals("The claim item is not existing", ex.getMessage());
+  }
+
+  @Test
   void failedClaimDueToNotEnoughQuantityTest() {
     LostItem item = new LostItem();
     item.setId(1L);

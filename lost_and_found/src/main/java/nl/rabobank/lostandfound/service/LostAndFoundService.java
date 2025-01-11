@@ -41,17 +41,20 @@ public class LostAndFoundService {
   @Transactional
   public String claimItem(Long userId, Long itemId, int quantity) throws BadRequestException {
     LostItem item = lostItemRepository.findById(itemId).orElse(null);
-    if (item != null && item.getQuantity() >= quantity) {
-      Claim claim = new Claim();
-      claim.setUserId(userId);
-      claim.setClaimedQuantity(quantity);
-      claim.setItemId(itemId);
-      item.setQuantity(item.getQuantity() - quantity);// update item quantity after claim
-      claim.setUserName(userMockService.getUserName(userId));
-      claimRepository.save(claim);
-      return "Claim report successfully.";
+    if(item != null) {
+      if (item.getQuantity() >= quantity) {
+        Claim claim = new Claim();
+        claim.setUserId(userId);
+        claim.setClaimedQuantity(quantity);
+        claim.setItemId(itemId);
+        item.setQuantity(item.getQuantity() - quantity);// update item quantity after claim
+        claim.setUserName(userMockService.getUserName(userId));
+        claimRepository.save(claim);
+        return "Claim report successfully.";
+      }
+      throw new BadRequestException("The claim quantity is greater than the quantity of the item in stock");
     }
-    throw new BadRequestException("The claim quantity is greater than the quantity of the item in stock");
+    throw new BadRequestException("The claim item is not existing");
   }
 
   public List<Claim> getAllClaims() {
