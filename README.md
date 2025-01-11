@@ -62,6 +62,7 @@ The uploaded lost item text file should follow this format:
    ...
    ```
 For example:
+   ```text
    ItemName: Laptop
    Quantity: 1
    Place: Taxi
