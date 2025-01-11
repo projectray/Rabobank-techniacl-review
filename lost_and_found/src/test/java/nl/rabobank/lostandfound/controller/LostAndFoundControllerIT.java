@@ -91,4 +91,17 @@ class LostAndFoundControllerIT {
     //Assert that the claim was failed
     assertEquals("The claim quantity is greater than the quantity of the item in stock", result.getResponse().getContentAsString());
   }
+
+  @Test
+  void claimItemInValidRequestBodyTest() throws Exception {
+    String json = objectMapper.writeValueAsString(new Claim());
+    MvcResult result = mockMvc.perform(post("/api/claim-item").content(json).contentType(MediaType.APPLICATION_JSON))
+      .andExpect(status().isBadRequest())
+      .andReturn();
+
+    //Assert that the claim was failed
+    assertTrue(result.getResponse().getContentAsString().contains("UserId cannot be null"));
+    assertTrue(result.getResponse().getContentAsString().contains("ItemId cannot be null"));
+    assertTrue(result.getResponse().getContentAsString().contains("Quantity of the claimed item cannot be null"));
+  }
 }

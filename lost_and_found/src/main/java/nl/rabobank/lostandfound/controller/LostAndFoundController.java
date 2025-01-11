@@ -1,5 +1,6 @@
 package nl.rabobank.lostandfound.controller;
 
+import jakarta.validation.Valid;
 import nl.rabobank.lostandfound.model.Claim;
 import nl.rabobank.lostandfound.model.LostItem;
 import nl.rabobank.lostandfound.service.LostAndFoundService;
@@ -46,7 +47,7 @@ public class LostAndFoundController {
   }
 
   @PostMapping("/claim-item")
-  public ResponseEntity<String> claimItem(@RequestBody Claim claim) {
+  public ResponseEntity<String> claimItem(@Valid @RequestBody Claim claim) {
     try {
       return ResponseEntity.ok(lostAndFoundService.claimItem(claim.getUserId(), claim.getItemId(), claim.getClaimedQuantity()));
     }catch (BadRequestException e){

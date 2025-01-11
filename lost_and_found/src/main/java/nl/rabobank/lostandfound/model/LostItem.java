@@ -20,7 +20,7 @@ public class LostItem {
   private Long id;
 
   private String itemName;
-  private int quantity;
+  private Integer quantity;
   private String place;
 
   @OneToMany(mappedBy = "lostItem", cascade = CascadeType.ALL, orphanRemoval = true)

@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Transient;
+
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,9 +20,12 @@ public class Claim {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @NotNull(message = "UserId cannot be null")
   private Long userId;
+  @NotNull(message = "ItemId cannot be null")
   private Long itemId;
-  private int claimedQuantity;
+  @NotNull(message = "Quantity of the claimed item cannot be null")
+  private Integer claimedQuantity;
 
   @ManyToOne
   @JoinColumn(name = "lost_item_id")
