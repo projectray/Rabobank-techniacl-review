@@ -27,7 +27,7 @@ This is a Spring Boot application for a lost and found system.  The administrato
    ```bash
    git clone https://github.com/projectray/Rabobank-techniacl-review.git
 2. **Build application:**
-   Navigate to the project's root directory and run:
+   Navigate to the project's root directory and run
    ```bash
    mvn clean install
    
