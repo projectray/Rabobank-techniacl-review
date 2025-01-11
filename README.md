@@ -30,4 +30,7 @@ This is a Spring Boot application for a lost and found system.  The administrato
    Navigate to the project's root directory and run
    ```bash
    mvn clean install
+4. **Run Application:** \nRun the Application:
+Navigate to the target directory and run:
+5. **Database:** This application uses an in-memory H2 database.
    
