@@ -1,14 +1,14 @@
 # Lost and Found Application
 
-This Spring Boot application manages a lost and found system.  It allows administrators to upload lost item details from a text file, users to view lost items and claim them, and administrators to view all claims.
+This is a Spring Boot application for a lost and found system.  The administrators is allowed to upload lost item details from a text file and to view all claims. Users are allowed to view lost items and claim them.
 
 ## Features
 
-* **Admin Panel:**
+* **Admin:**
     * Upload lost item details from a text file (ItemName, Quantity, Place).  The file should follow a specific format (see below).
     * View all claims made by users.
 
-* **User Panel:**
+* **User:**
     * View a list of all lost items.
     * Claim lost items, specifying the item and the quantity claimed.
 
@@ -17,7 +17,7 @@ This Spring Boot application manages a lost and found system.  It allows adminis
 * Java
 * Spring Boot
 * Spring Data JPA
-* H2 Database (in-memory, for testing; easily configurable for other databases)
+* H2 Database (in-memory, for testing)
 * Maven (for build management)
 * JUnit/Mockito (for testing)
 
@@ -25,4 +25,9 @@ This Spring Boot application manages a lost and found system.  It allows adminis
 
 1. **Clone the Repository:**
    ```bash
-   git clone <repository_url>
+   git clone <repository_url
+2. **Build application:**
+   Navigate to the project's root directory and run:
+   ```bash
+   mvn clean install
+   
