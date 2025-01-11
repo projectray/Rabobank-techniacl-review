@@ -32,5 +32,8 @@ This is a Spring Boot application for a lost and found system.  The administrato
    mvn clean install
 4. **Run Application:** \
    Navigate to the target directory and run:
-6. **Database:** This application uses an in-memory H2 database.
+5. **Database:**\
+   This application uses an in-memory H2 database.
+6. **Test:**\
+   Unit tests and integration tests are included and run automatically during the build process. 
    
