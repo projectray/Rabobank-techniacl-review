@@ -7,6 +7,7 @@ This is a Spring Boot application for a lost and found system.  The administrato
 * **Admin:**
     * Upload lost item details from a text file (ItemName, Quantity, Place).  The file should follow a specific format (see below).
     * View all claims made by users.
+    * View claims requests by a specific user.
 
 * **User:**
     * View a list of all lost items.
@@ -37,5 +38,16 @@ This is a Spring Boot application for a lost and found system.  The administrato
 6. **Database:**\
    This application uses an in-memory H2 database.
 7. **Test:**\
-   Unit tests and integration tests are included and run automatically during the build process. 
+   Unit tests and integration tests are included and run automatically during the build process.
+   
+## API Endpoints
+* **Admin:**
+    * `/api/admin/upload-items: POST - Uploads lost items from a file.
+    * `/api/admin/check-claims: GET - Retrieves all claims.
+    * `/api/admin/check-user-claims: GET - Retrieves all claims.
+
+* **User:**
+    * `/api/claim-item: POST - Claims a lost item (requires userId, itemId, quantityClaimed).
+    * `/api/lost-items: GET - Retrieves a list of all lost items.
+
    
