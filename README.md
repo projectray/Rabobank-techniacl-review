@@ -42,12 +42,12 @@ This is a Spring Boot application for a lost and found system.  The administrato
    
 ## API Endpoints
 * **Admin:**
-    * `/api/admin/upload-items: POST - Uploads lost items from a file.
-    * `/api/admin/check-claims: GET - Retrieves all claims.
-    * `/api/admin/check-user-claims: GET - Retrieves all claims.
+    * /api/admin/upload-items: POST - Uploads lost items from a file.
+    * /api/admin/check-claims: GET - Retrieves all claims.
+    * /api/admin/check-user-claims: GET - Retrieves all claims.
 
 * **User:**
-    * `/api/claim-item: POST - Claims a lost item (requires userId, itemId, quantityClaimed).
-    * `/api/lost-items: GET - Retrieves a list of all lost items.
+    * /api/claim-item: POST - Claims a lost item (requires userId, itemId, quantityClaimed).
+    * /api/lost-items: GET - Retrieves a list of all lost items.
 
    
