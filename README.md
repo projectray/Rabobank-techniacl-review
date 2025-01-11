@@ -32,8 +32,10 @@ This is a Spring Boot application for a lost and found system.  The administrato
    mvn clean install
 4. **Run Application:** \
    Navigate to the target directory and run:
-5. **Database:**\
+   ```bash
+   java -jar lost_and_found-0.0.1-SNAPSHOT.jar
+6. **Database:**\
    This application uses an in-memory H2 database.
-6. **Test:**\
+7. **Test:**\
    Unit tests and integration tests are included and run automatically during the build process. 
    
