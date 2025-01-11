@@ -26,12 +26,11 @@ This is a Spring Boot application for a lost and found system.  The administrato
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/projectray/Rabobank-techniacl-review.git
-2. **Build application:**
-   Navigate to the project's root directory and run
+2. **Build application:**\
+   Navigate to the project's root directory and run:
    ```bash
    mvn clean install
 4. **Run Application:** \
-   Run the Application:
-Navigate to the target directory and run:
+   Navigate to the target directory and run:
 6. **Database:** This application uses an in-memory H2 database.
    
