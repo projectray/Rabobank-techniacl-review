@@ -31,6 +31,5 @@ public class Claim {
   @JoinColumn(name = "lost_item_id")
   private LostItem lostItem;
 
-  @Transient
   private String userName;
 }
