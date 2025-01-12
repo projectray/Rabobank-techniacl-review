@@ -1,10 +1,10 @@
 package nl.rabobank.lostandfound.service;
 
+import nl.rabobank.lostandfound.execption.BadRequestException;
 import nl.rabobank.lostandfound.model.Claim;
 import nl.rabobank.lostandfound.model.LostItem;
 import nl.rabobank.lostandfound.repository.ClaimRepository;
 import nl.rabobank.lostandfound.repository.LostItemRepository;
-import org.apache.coyote.BadRequestException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

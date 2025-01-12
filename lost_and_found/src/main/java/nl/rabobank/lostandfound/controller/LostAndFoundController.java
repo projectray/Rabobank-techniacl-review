@@ -1,10 +1,10 @@
 package nl.rabobank.lostandfound.controller;
 
 import jakarta.validation.Valid;
+import nl.rabobank.lostandfound.execption.BadRequestException;
 import nl.rabobank.lostandfound.model.Claim;
 import nl.rabobank.lostandfound.model.LostItem;
 import nl.rabobank.lostandfound.service.LostAndFoundService;
-import org.apache.coyote.BadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

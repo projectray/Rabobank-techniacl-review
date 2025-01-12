@@ -1,11 +1,11 @@
 package nl.rabobank.lostandfound.service;
 
 import jakarta.transaction.Transactional;
+import nl.rabobank.lostandfound.execption.BadRequestException;
 import nl.rabobank.lostandfound.model.Claim;
 import nl.rabobank.lostandfound.model.LostItem;
 import nl.rabobank.lostandfound.repository.ClaimRepository;
 import nl.rabobank.lostandfound.repository.LostItemRepository;
-import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
