@@ -49,6 +49,11 @@ This is a Spring Boot application for a lost and found system.  The administrato
 * **User:**
     * /api/claim-item: POST - Claims a lost item (requires userId, itemId, quantityClaimed).
     * /api/lost-items: GET - Retrieves a list of all lost items.
+      
+For more information about the endpoint, please check the api contract file:
+```text
+src/main/resource/api.yml
+```
  
 ## File structure for upload lost item 
 The uploaded lost item text file should follow this format:
