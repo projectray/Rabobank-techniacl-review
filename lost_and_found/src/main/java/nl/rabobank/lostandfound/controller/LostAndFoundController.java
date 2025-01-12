@@ -62,7 +62,7 @@ public class LostAndFoundController {
   }
 
   @GetMapping("/admin/check-user-claims")
-  public ResponseEntity<List<Claim>> getAllClaimsByUserID(@RequestParam Long userId){
+  public ResponseEntity<List<Claim>> getAllClaimsByUserID(@RequestParam long userId){
     return ResponseEntity.ok(lostAndFoundService.getClaimsByUserId(userId));
   }
 }

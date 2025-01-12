@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface ClaimRepository extends JpaRepository<Claim, Long> {
   @Query("SELECT c FROM Claim c WHERE c.userId = :userId")
-  List<Claim> findClaimsByUserId(@Param("userId") Long userId);
+  List<Claim> findClaimsByUserId(@Param("userId") long userId);
 }

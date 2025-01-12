@@ -61,7 +61,7 @@ public class LostAndFoundService {
     return claimRepository.findAll();
   }
 
-  public List<Claim> getClaimsByUserId(Long userId) {
+  public List<Claim> getClaimsByUserId(long userId) {
     return claimRepository.findClaimsByUserId(userId);
   }
 }
